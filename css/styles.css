@@ -404,10 +404,12 @@ button {
 
 .job-title {
   color: #1e22aa;
+  font-size: 18px;
 }
 
 .job-description {
   font-weight: 400;
+  font-size: 16px;
 }
 
 #uxui .team-card-front {
@@ -745,17 +747,18 @@ main {
   background: #e5f6ff url("../assets/bg/jobsBg.svg") no-repeat top center;
   background-size: auto;
   background-position: top center;
+  border-radius: 22px;
 }
 .jobs .job-container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
   padding: 28px 0px;
   box-sizing: border-box;
 }
 .jobs .job-container .job-card {
-  height: 120px;
+  height: 105px;
   padding: 20px;
   box-sizing: border-box;
   background-color: #ffffff;

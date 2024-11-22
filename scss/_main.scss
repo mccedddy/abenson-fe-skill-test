@@ -312,17 +312,18 @@ main {
     center;
   background-size: auto;
   background-position: top center;
+  border-radius: 22px;
 
   .job-container {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 20px;
     padding: 28px 0px;
     box-sizing: border-box;
 
     .job-card {
-      height: 120px;
+      height: 105px;
       padding: 20px;
       box-sizing: border-box;
       background-color: colors.$white;
