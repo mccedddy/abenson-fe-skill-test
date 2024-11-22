@@ -1,0 +1,100 @@
+@use "global";
+@use "colors";
+@use "buttons";
+
+.header {
+  width: 100%;
+  max-width: 1280px;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  background-color: colors.$white;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.top-menu {
+  width: 100%;
+  height: 34px;
+  padding: 6px 30px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: colors.$light;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  div {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.middle-menu {
+  width: 100%;
+  height: 70px;
+  padding: 8px 30px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  background-color: colors.$primary;
+  border-radius: 0px 0px 20px 20px;
+
+  @media (max-width: 768px) {
+    padding: 8px 12px 10px 12px;
+    gap: 12px;
+  }
+
+  .input-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    #search-bar {
+      width: 100%;
+      height: 40px;
+      padding: 5px 8px 5px 12px;
+      box-sizing: border-box;
+      border: 0px;
+      border-radius: 22px;
+      background-color: colors.$faded;
+      color: colors.$white;
+      font-size: 14px;
+      outline: none;
+      position: relative;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+
+  .buttons-container {
+    display: flex;
+    gap: 15px;
+  }
+}
+
+.bottom-menu {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 30px;
+  padding: 0px 30px;
+  box-sizing: border-box;
+  margin: 5px 0px 5px 0px;
+  border: 0px;
+  overflow-x: auto;
+
+  // No scrollbar
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
