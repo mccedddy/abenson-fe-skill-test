@@ -233,6 +233,22 @@ button {
   transform: translateY(0px);
 }
 
+#see-all-jobs {
+  width: 275px;
+  height: 44px;
+  border-radius: 22px;
+  background-color: #ffffff;
+  color: #1e22aa;
+  border: 1px solid #185baa;
+  font-weight: 600;
+  font-size: 16px;
+  transition: 0.2s ease-in-out;
+}
+#see-all-jobs:hover {
+  color: #fff;
+  background-color: #185baa;
+}
+
 .header {
   width: 100%;
   max-width: 1280px;
@@ -386,6 +402,14 @@ button {
   font-size: 18px;
 }
 
+.job-title {
+  color: #1e22aa;
+}
+
+.job-description {
+  font-weight: 400;
+}
+
 #uxui .team-card-front {
   background-color: #735ff2;
 }
@@ -460,7 +484,6 @@ main {
 @media (max-width: 768px) {
   main {
     gap: 16px;
-    width: 100%;
   }
 }
 
@@ -532,6 +555,7 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 .about-us .mvc {
@@ -708,6 +732,39 @@ main {
 .teams .teams-container .team-card .team-card-inner .team-card-back {
   background-color: #656565;
   transform: rotateY(180deg);
+}
+
+.jobs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 50px;
+  box-sizing: border-box;
+  background: #e5f6ff url("../assets/bg/jobsBg.svg") no-repeat top center;
+  background-size: auto;
+  background-position: top center;
+}
+.jobs .job-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 20px;
+  padding: 28px 0px;
+  box-sizing: border-box;
+}
+.jobs .job-container .job-card {
+  height: 120px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 0px 10px 25px 1px rgba(0, 0, 0, 0.3);
 }
 
 /*# sourceMappingURL=styles.css.map */

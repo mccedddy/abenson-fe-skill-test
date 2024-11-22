@@ -195,3 +195,20 @@
     transform: translateY(0px);
   }
 }
+
+#see-all-jobs {
+  width: 275px;
+  height: 44px;
+  border-radius: 22px;
+  background-color: colors.$white;
+  color: colors.$primary;
+  border: 1px solid colors.$primary-light;
+  font-weight: 600;
+  font-size: 16px;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    color: #fff;
+    background-color: colors.$primary-light;
+  }
+}
