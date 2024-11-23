@@ -441,6 +441,74 @@
         </div>
         <button type="button" id="see-all-jobs">See All</button>
       </section>
+
+      <section class="send">
+        <h2 class="section-title">Not on the List?</h2>
+        <h5 class="section-description">Send us your resume here!</h5>
+
+        <form class="send-form">
+          <div class="input">
+            <label for="name" id="namelabel">Name</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+          <div class="input">
+            <label for="email" id="emaillabel">Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="input">
+            <label for="resume">Attach Resume</label>
+            <div class="file-input">
+              <h6 id="file-name">No file chosen</h6>
+              <button type="button" id="browse-file">Browse Files</button>
+            </div>
+            <input
+              type="file"
+              name="resume"
+              placeholder="Resume.pdf"
+              required
+            />
+          </div>
+          <button type="submit" id="submit-resume">Submit</button>
+        </form>
+      </section>
+
+      <section class="follow">
+        <h2 class="section-title">Follow Us</h2>
+
+        <form class="follow-container">
+          <div class="follow-tile">
+            <img src="./assets/images/facebookLogo.png" alt="Facebook Logo" />
+            <div class="follow-text-container">
+              <h6 class="follow-text">Facebook</h6>
+              <h6 class="follow-text">Abenson Careers</h6>
+            </div>
+          </div>
+          <div class="follow-tile">
+            <img src="./assets/images/jobstreetLogo.png" alt="Jobstreet Logo" />
+            <div class="follow-text-container">
+              <h6 class="follow-text">Jobstreet</h6>
+              <h6 class="follow-text">Abenson Ventures Inc</h6>
+            </div>
+          </div>
+          <div class="follow-tile">
+            <img src="./assets/images/linkedinLogo.png" alt="LinkedIn Logo" />
+            <div class="follow-text-container">
+              <h6 class="follow-text">LinkedIn</h6>
+              <h6 class="follow-text">Abenson</h6>
+            </div>
+          </div>
+        </form>
+      </section>
     </main>
     <script src="js/scripts.js"></script>
   </body>

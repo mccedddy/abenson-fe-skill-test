@@ -336,3 +336,90 @@ main {
     }
   }
 }
+
+.send {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  .send-form {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    gap: 16px;
+
+    .input {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+
+      input[type="text"],
+      input[type="email"],
+      .file-input {
+        height: 44px;
+        width: 330px;
+        border: 1px solid colors.$primary;
+        border-radius: 28px;
+        position: relative;
+        padding: 14px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      label {
+        position: absolute;
+        z-index: 1;
+        left: 15px;
+        top: -12px;
+        padding: 4px;
+        box-sizing: border-box;
+        background-color: colors.$white;
+        color: colors.$primary-light;
+      }
+
+      .file-input {
+        border: 1px solid colors.$light-darker;
+        padding: 0px 0px 0px 14px;
+      }
+
+      input[type="file"] {
+        display: none;
+      }
+    }
+  }
+}
+
+.follow {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  .follow-container {
+    display: flex;
+    gap: 40px;
+
+    .follow-tile {
+      display: flex;
+      gap: 16px;
+
+      .follow-text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+      }
+    }
+  }
+}

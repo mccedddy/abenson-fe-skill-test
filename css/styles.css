@@ -14,7 +14,8 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+label {
   margin: 0px;
   padding: 0px;
 }
@@ -47,10 +48,19 @@ p {
   font-size: 12px;
 }
 
+label {
+  font-size: 11px;
+  font-weight: 600;
+}
+
 button {
   cursor: pointer;
   text-wrap: nowrap;
   outline: none;
+}
+
+input {
+  color: #4c525c;
 }
 
 .top-menu-button {
@@ -221,7 +231,7 @@ button {
   font-weight: 600;
   color: #185baa;
   border-radius: 28px;
-  background-color: #fff;
+  background-color: #ffffff;
   font-size: 15px;
   transition: 0.2s ease-in-out;
 }
@@ -245,7 +255,29 @@ button {
   transition: 0.2s ease-in-out;
 }
 #see-all-jobs:hover {
-  color: #fff;
+  color: #ffffff;
+  background-color: #185baa;
+}
+
+#browse-file {
+  height: 100%;
+  width: 131px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid #185baa;
+  border-radius: 28px;
+  color: #185baa;
+  background-color: #ffffff;
+}
+
+#submit-resume {
+  height: 44px;
+  width: 330px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid #185baa;
+  border-radius: 28px;
+  color: #ffffff;
   background-color: #185baa;
 }
 
@@ -410,6 +442,17 @@ button {
 .job-description {
   font-weight: 400;
   font-size: 16px;
+}
+
+#file-name {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.follow-text {
+  font-weight: 400;
+  font-size: 14px;
+  text-align: left;
 }
 
 #uxui .team-card-front {
@@ -768,6 +811,84 @@ main {
   justify-content: center;
   border-radius: 15px;
   box-shadow: 0px 10px 25px 1px rgba(0, 0, 0, 0.3);
+}
+
+.send {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.send .send-form {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  gap: 16px;
+}
+.send .send-form .input {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.send .send-form .input input[type=text],
+.send .send-form .input input[type=email],
+.send .send-form .input .file-input {
+  height: 44px;
+  width: 330px;
+  border: 1px solid #1e22aa;
+  border-radius: 28px;
+  position: relative;
+  padding: 14px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.send .send-form .input label {
+  position: absolute;
+  z-index: 1;
+  left: 15px;
+  top: -12px;
+  padding: 4px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #185baa;
+}
+.send .send-form .input .file-input {
+  border: 1px solid #dadce0;
+  padding: 0px 0px 0px 14px;
+}
+.send .send-form .input input[type=file] {
+  display: none;
+}
+
+.follow {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.follow .follow-container {
+  display: flex;
+  gap: 40px;
+}
+.follow .follow-container .follow-tile {
+  display: flex;
+  gap: 16px;
+}
+.follow .follow-container .follow-tile .follow-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
 }
 
 /*# sourceMappingURL=styles.css.map */
