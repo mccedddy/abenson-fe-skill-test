@@ -1,5 +1,46 @@
 @use "colors.scss";
 
+@mixin button($type: primary, $hover-up: true, $hover-color: true) {
+  height: 44px;
+  width: 330px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 28px;
+  transition: 0.2s ease-in-out;
+
+  // Dynamic properties
+  @if $type == primary {
+    border: 1px solid colors.$primary-light;
+    color: colors.$white;
+    background-color: colors.$primary-light;
+  } @else if $type == white {
+    border: 1px solid colors.$primary-light;
+    color: colors.$primary-light;
+    background-color: colors.$white;
+  }
+
+  // Hover
+  @if $hover-up == true {
+    &:hover {
+      transform: translateY(-4px);
+    }
+    &:active {
+      transform: translateY(0px);
+    }
+  }
+
+  @if $hover-color == true {
+    &:hover {
+      @if $type == primary {
+        background-color: colors.$primary;
+      } @else if $type == white {
+        color: colors.$white;
+        background-color: colors.$primary-light;
+      }
+    }
+  }
+}
+
 .top-menu-button {
   height: 22px;
   border: 0px;
@@ -106,15 +147,7 @@
 }
 
 .banner-button {
-  height: 44px;
-  width: 100%;
-  max-width: 230px;
-  border: 1px solid colors.$primary-light;
-  border-radius: 28px;
-  font-weight: 600;
-  font-size: 16px;
   box-shadow: 0px 5px 20px 3px rgba(0, 0, 0, 0.3);
-  transition: 0.2s ease-in-out;
 
   .desktop {
     display: block;
@@ -141,96 +174,51 @@
 }
 
 #check-openings-button {
-  color: colors.$primary-light;
-  background-color: colors.$white;
+  @include button(white);
+
+  height: 44px;
+  width: 100%;
+  max-width: 230px;
 
   &:hover {
-    background-color: colors.$white;
     box-shadow: 0px 5px 20px 1px rgba(255, 255, 255, 0.1);
-    transform: translateY(-4px);
-  }
-
-  &:active {
-    transform: translateY(0px);
-    background-color: colors.$light-dark;
-    border: 1px solid colors.$primary;
   }
 }
 
 #submit-resume-button {
-  color: colors.$white;
-  background-color: colors.$primary-light;
+  @include button;
+
+  height: 44px;
+  width: 100%;
+  max-width: 230px;
 
   &:hover {
-    background-color: colors.$primary;
-    border: 1px solid colors.$primary-light;
     box-shadow: 0px 5px 20px 1px rgba(255, 255, 255, 0.1);
-    transform: translateY(-4px);
-  }
-
-  &:active {
-    transform: translateY(0px);
-    background-color: colors.$primary-dark;
-    border: 1px solid colors.$primary;
   }
 }
 
 .team-card-button {
+  @include button(white, $hover-color: false);
+
   height: 44px;
   width: 80%;
   border: 0px;
-  font-weight: 600;
-  color: #185baa;
-  border-radius: 28px;
-  background-color: colors.$white;
-  font-size: 15px;
-  transition: 0.2s ease-in-out;
-
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0px 5px 20px 1px rgba(255, 255, 255, 0.3);
-  }
-
-  &:active {
-    transform: translateY(0px);
-  }
 }
 
 #see-all-jobs {
-  width: 275px;
+  @include button(white, $hover-up: false);
+
   height: 44px;
   border-radius: 22px;
-  background-color: colors.$white;
-  color: colors.$primary;
-  border: 1px solid colors.$primary-light;
-  font-weight: 600;
-  font-size: 16px;
-  transition: 0.2s ease-in-out;
-
-  &:hover {
-    color: colors.$white;
-    background-color: colors.$primary-light;
-  }
 }
 
 #browse-file {
+  @include button(white, $hover-up: false);
+
   height: 100%;
   width: 131px;
-  font-size: 13px;
-  font-weight: 600;
-  border: 1px solid colors.$primary-light;
-  border-radius: 28px;
-  color: colors.$primary-light;
-  background-color: colors.$white;
 }
 
 #submit-resume {
-  height: 44px;
-  width: 330px;
-  font-size: 13px;
-  font-weight: 600;
-  border: 1px solid colors.$primary-light;
-  border-radius: 28px;
-  color: colors.$white;
-  background-color: colors.$primary-light;
+  @include button;
 }

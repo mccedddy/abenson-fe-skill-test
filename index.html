@@ -407,7 +407,7 @@
 
       <section class="jobs">
         <h2 class="section-title">Featured Job Openings</h2>
-        <div class="job-container">
+        <div class="job-grid">
           <div class="job-card">
             <h4 class="job-title">CORPORATE SALES SPECIALIST</h4>
             <h4 class="job-description">Quezon City</h4>
@@ -448,7 +448,7 @@
 
         <form class="send-form">
           <div class="input">
-            <label for="name" id="namelabel">Name</label>
+            <label for="name" class="input-label" id="name-label">Name</label>
             <input
               type="text"
               name="name"
@@ -457,7 +457,9 @@
             />
           </div>
           <div class="input">
-            <label for="email" id="emaillabel">Email</label>
+            <label for="email" class="input-label" id="email-label"
+              >Email</label
+            >
             <input
               type="email"
               name="email"
@@ -466,7 +468,9 @@
             />
           </div>
           <div class="input">
-            <label for="resume">Attach Resume</label>
+            <label for="resume" class="input-label" id="resume-label"
+              >Attach Resume</label
+            >
             <div class="file-input">
               <h6 id="file-name">No file chosen</h6>
               <button type="button" id="browse-file">Browse Files</button>

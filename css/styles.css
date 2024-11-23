@@ -160,15 +160,7 @@ input {
 }
 
 .banner-button {
-  height: 44px;
-  width: 100%;
-  max-width: 230px;
-  border: 1px solid #185baa;
-  border-radius: 28px;
-  font-weight: 600;
-  font-size: 16px;
   box-shadow: 0px 5px 20px 3px rgba(0, 0, 0, 0.3);
-  transition: 0.2s ease-in-out;
 }
 .banner-button .desktop {
   display: block;
@@ -194,65 +186,93 @@ input {
 }
 
 #check-openings-button {
+  height: 44px;
+  width: 330px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 28px;
+  transition: 0.2s ease-in-out;
+  border: 1px solid #185baa;
   color: #185baa;
   background-color: #ffffff;
+  height: 44px;
+  width: 100%;
+  max-width: 230px;
 }
 #check-openings-button:hover {
-  background-color: #ffffff;
-  box-shadow: 0px 5px 20px 1px rgba(255, 255, 255, 0.1);
   transform: translateY(-4px);
 }
 #check-openings-button:active {
   transform: translateY(0px);
-  background-color: #e3e3e3;
-  border: 1px solid #1e22aa;
 }
-
-#submit-resume-button {
+#check-openings-button:hover {
   color: #ffffff;
   background-color: #185baa;
 }
-#submit-resume-button:hover {
-  background-color: #1e22aa;
-  border: 1px solid #185baa;
+#check-openings-button:hover {
   box-shadow: 0px 5px 20px 1px rgba(255, 255, 255, 0.1);
+}
+
+#submit-resume-button {
+  height: 44px;
+  width: 330px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 28px;
+  transition: 0.2s ease-in-out;
+  border: 1px solid #185baa;
+  color: #ffffff;
+  background-color: #185baa;
+  height: 44px;
+  width: 100%;
+  max-width: 230px;
+}
+#submit-resume-button:hover {
   transform: translateY(-4px);
 }
 #submit-resume-button:active {
   transform: translateY(0px);
-  background-color: #151877;
-  border: 1px solid #1e22aa;
+}
+#submit-resume-button:hover {
+  background-color: #1e22aa;
+}
+#submit-resume-button:hover {
+  box-shadow: 0px 5px 20px 1px rgba(255, 255, 255, 0.1);
 }
 
 .team-card-button {
   height: 44px;
+  width: 330px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 28px;
+  transition: 0.2s ease-in-out;
+  border: 1px solid #185baa;
+  color: #185baa;
+  background-color: #ffffff;
+  height: 44px;
   width: 80%;
   border: 0px;
-  font-weight: 600;
-  color: #185baa;
-  border-radius: 28px;
-  background-color: #ffffff;
-  font-size: 15px;
-  transition: 0.2s ease-in-out;
 }
 .team-card-button:hover {
   transform: translateY(-4px);
-  box-shadow: 0px 5px 20px 1px rgba(255, 255, 255, 0.3);
 }
 .team-card-button:active {
   transform: translateY(0px);
 }
 
 #see-all-jobs {
-  width: 275px;
+  height: 44px;
+  width: 330px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 28px;
+  transition: 0.2s ease-in-out;
+  border: 1px solid #185baa;
+  color: #185baa;
+  background-color: #ffffff;
   height: 44px;
   border-radius: 22px;
-  background-color: #ffffff;
-  color: #1e22aa;
-  border: 1px solid #185baa;
-  font-weight: 600;
-  font-size: 16px;
-  transition: 0.2s ease-in-out;
 }
 #see-all-jobs:hover {
   color: #ffffff;
@@ -260,14 +280,21 @@ input {
 }
 
 #browse-file {
-  height: 100%;
-  width: 131px;
+  height: 44px;
+  width: 330px;
   font-size: 13px;
   font-weight: 600;
-  border: 1px solid #185baa;
   border-radius: 28px;
+  transition: 0.2s ease-in-out;
+  border: 1px solid #185baa;
   color: #185baa;
   background-color: #ffffff;
+  height: 100%;
+  width: 131px;
+}
+#browse-file:hover {
+  color: #ffffff;
+  background-color: #185baa;
 }
 
 #submit-resume {
@@ -275,10 +302,20 @@ input {
   width: 330px;
   font-size: 13px;
   font-weight: 600;
-  border: 1px solid #185baa;
   border-radius: 28px;
+  transition: 0.2s ease-in-out;
+  border: 1px solid #185baa;
   color: #ffffff;
   background-color: #185baa;
+}
+#submit-resume:hover {
+  transform: translateY(-4px);
+}
+#submit-resume:active {
+  transform: translateY(0px);
+}
+#submit-resume:hover {
+  background-color: #1e22aa;
 }
 
 .header {
@@ -531,6 +568,11 @@ main {
     gap: 16px;
   }
 }
+@media (max-width: 542px) {
+  main {
+    width: 100%;
+  }
+}
 
 .banner {
   width: 100%;
@@ -684,15 +726,21 @@ main {
 
 .join {
   width: 100%;
+  text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 .join .join-container {
   width: 100%;
   display: flex;
-  gap: 40px;
+  gap: 20px;
   overflow-x: auto;
+  margin-top: 20px;
+  text-align: start;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -719,8 +767,12 @@ main {
 
 .teams {
   width: 100%;
+  text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 .teams .teams-container {
@@ -728,10 +780,12 @@ main {
   display: flex;
   gap: 20px;
   overflow-x: auto;
-  padding: 28px 0px;
-  box-sizing: border-box;
+  margin-top: 20px;
+  text-align: start;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  padding: 30px 0px;
+  box-sizing: border-box;
 }
 .teams .teams-container::-webkit-scrollbar {
   display: none;
@@ -781,9 +835,12 @@ main {
 
 .jobs {
   width: 100%;
+  text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   gap: 20px;
   padding: 50px;
   box-sizing: border-box;
@@ -792,7 +849,7 @@ main {
   background-position: top center;
   border-radius: 22px;
 }
-.jobs .job-container {
+.jobs .job-grid {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -800,7 +857,7 @@ main {
   padding: 28px 0px;
   box-sizing: border-box;
 }
-.jobs .job-container .job-card {
+.jobs .job-grid .job-card {
   height: 105px;
   padding: 20px;
   box-sizing: border-box;
@@ -839,7 +896,7 @@ main {
 .send .send-form .input .file-input {
   height: 44px;
   width: 330px;
-  border: 1px solid #1e22aa;
+  border: 1px solid #185baa;
   border-radius: 28px;
   position: relative;
   padding: 14px;
@@ -848,7 +905,12 @@ main {
   justify-content: space-between;
   align-items: center;
 }
-.send .send-form .input label {
+.send .send-form .input input[type=text]:focus,
+.send .send-form .input input[type=email]:focus,
+.send .send-form .input .file-input:focus {
+  outline: 1px solid #185baa;
+}
+.send .send-form .input .input-label {
   position: absolute;
   z-index: 1;
   left: 15px;
@@ -857,6 +919,9 @@ main {
   box-sizing: border-box;
   background-color: #ffffff;
   color: #185baa;
+}
+.send .send-form .input #resume-label {
+  color: #575757;
 }
 .send .send-form .input .file-input {
   border: 1px solid #dadce0;
