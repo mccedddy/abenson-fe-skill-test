@@ -99,6 +99,10 @@
         .item-group {
           width: 150px;
 
+          @media (max-width: 1024px) {
+            width: 140px;
+          }
+
           #payment-methods-img {
             width: 85%;
           }
@@ -119,6 +123,10 @@
         display: flex;
         gap: 32px;
         margin-bottom: 20px;
+
+        @media (max-width: 1024px) {
+          gap: 22px;
+        }
 
         @media (max-width: 768px) {
           justify-content: center;

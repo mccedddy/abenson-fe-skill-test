@@ -156,6 +156,10 @@
     display: none;
   }
 
+  .button-text {
+    font-size: 15px;
+  }
+
   @media (max-width: 542px) {
     .desktop {
       display: none;
@@ -203,6 +207,30 @@
   height: 44px;
   width: 80%;
   border: 0px;
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  @media (max-width: 425px) {
+    height: 32px;
+
+    .mobile {
+      display: block;
+    }
+
+    .desktop {
+      display: none;
+    }
+  }
+
+  p {
+    font-size: 15px;
+  }
 }
 
 #see-all-jobs {
