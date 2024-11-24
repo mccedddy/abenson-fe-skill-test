@@ -96,9 +96,9 @@
   overflow-x: auto;
 
   // No scrollbar
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  &::-webkit-scrollbar {
+  @include global.no-scrollbar;
+
+  @media (max-width: 768px) {
     display: none;
   }
 }

@@ -147,11 +147,11 @@
       .connect-group {
         display: flex;
         flex-direction: column;
-        border-top: 1px solid white;
+        border-top: 1px solid colors.$white-fade;
 
         .connect-item {
           padding: 16px 8px;
-          border-bottom: 1px solid white;
+          border-bottom: 1px solid colors.$white-fade;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -171,7 +171,7 @@
     justify-content: space-around;
     align-items: start;
     padding-top: 16px;
-    border-top: 1px solid white;
+    border-top: 1px solid colors.$white-fade;
     gap: 42px;
     text-align: center;
 
@@ -203,7 +203,7 @@
       align-items: center;
       justify-content: center;
       gap: 20px;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid colors.$white-fade;
       flex-wrap: wrap;
 
       div {

@@ -7,6 +7,14 @@
 // 425px
 // 375px
 
+@mixin no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 body {
   margin: 0px;
   display: flex;
