@@ -830,7 +830,8 @@ input {
 }
 .join .join-container .join-card {
   height: 100%;
-  min-width: 125px;
+  width: 20vw;
+  min-width: 220px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -840,6 +841,7 @@ input {
   .join .join-container .join-card {
     align-items: center;
     text-align: center;
+    min-width: 125px;
   }
 }
 .join .join-container .join-card img {
