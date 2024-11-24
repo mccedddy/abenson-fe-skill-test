@@ -1,4 +1,5 @@
-@use "colors.scss";
+@use "../utils/global";
+@use "../utils/colors";
 
 @mixin button($type: primary, $hover-up: true, $hover-color: true) {
   height: 44px;

@@ -1,5 +1,5 @@
-@use "global";
-@use "colors";
-@use "header";
-@use "main";
-@use "footer";
+@use "utils/global";
+@use "utils/colors";
+@use "layout/header";
+@use "layout/main";
+@use "layout/footer";

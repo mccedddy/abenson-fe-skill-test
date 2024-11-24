@@ -1,7 +1,7 @@
-@use "global";
-@use "colors";
-@use "text";
-@use "teamCards";
+@use "../utils/global";
+@use "../utils/colors";
+@use "../components/text";
+@use "../utils/teamCards";
 
 @mixin section {
   width: 100%;

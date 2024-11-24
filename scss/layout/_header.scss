@@ -1,6 +1,6 @@
-@use "global";
-@use "colors";
-@use "buttons";
+@use "../utils/global";
+@use "../utils/colors";
+@use "../components/buttons";
 
 .header {
   width: 100%;

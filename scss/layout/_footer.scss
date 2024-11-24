@@ -1,4 +1,6 @@
-@use "colors";
+@use "../utils/global";
+@use "../utils/colors";
+@use "../components/text";
 
 .footer {
   width: 100%;
@@ -10,7 +12,7 @@
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 425px) {
+  @media (max-width: 525px) {
     display: none;
   }
 }
