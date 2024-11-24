@@ -78,3 +78,32 @@
   font-size: 14px;
   text-align: left;
 }
+
+.sub-title {
+  color: colors.$white;
+}
+
+.sub-description {
+  color: colors.$white;
+  font-weight: 400;
+}
+
+.group-title {
+  color: colors.$secondary;
+  margin-bottom: 15px;
+}
+
+.group-text {
+  color: colors.$white;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.group-link {
+  @extend .group-text;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

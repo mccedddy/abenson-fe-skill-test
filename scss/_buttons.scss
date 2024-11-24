@@ -3,7 +3,7 @@
 @mixin button($type: primary, $hover-up: true, $hover-color: true) {
   height: 44px;
   width: 330px;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   border-radius: 28px;
   transition: 0.2s ease-in-out;
@@ -221,4 +221,15 @@
 
 #submit-resume {
   @include button;
+}
+
+#subscribe-button {
+  @include button(white, $hover-up: false, $hover-color: false);
+
+  width: auto;
+  position: absolute;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  background-color: colors.$secondary;
+  border: 0px;
 }

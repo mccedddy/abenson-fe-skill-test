@@ -1,0 +1,131 @@
+@use "colors";
+
+.footer {
+  width: 100%;
+  height: 569px;
+  background: colors.$primary url("../assets/bg/footer.png") repeat top center;
+  background-size: contain;
+  background-position: top center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  width: 95%;
+  height: 531px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+
+  .top-block {
+    height: 465px;
+    display: flex;
+    justify-content: space-between;
+
+    .left-content {
+      width: 440px;
+      height: 380px;
+
+      .sub-email-container {
+        position: relative;
+        display: flex;
+        justify-content: end;
+        margin: 10px 0px;
+
+        #sub-email {
+          width: 100%;
+          height: 44px;
+          padding: 6px 0px 6px 12px;
+          box-sizing: border-box;
+          background-color: colors.$white;
+          border-radius: 22px;
+          border: 0px;
+          outline: 0px;
+        }
+      }
+
+      #abenson-rewards-banner {
+        width: 100%;
+        margin: 15px 0px;
+      }
+    }
+
+    .middle-content {
+      width: 378px;
+      height: 335px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      margin: 0px 20px;
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+
+        .item-group {
+          width: 150px;
+
+          #payment-methods-img {
+            width: 85%;
+          }
+        }
+      }
+    }
+
+    .right-content {
+      width: 308px;
+      height: 465px;
+
+      .social-container {
+        display: flex;
+        gap: 32px;
+        margin-bottom: 20px;
+
+        .social-item {
+          transition: 0.2s ease-in-out;
+
+          &:hover {
+            cursor: pointer;
+            transform: translateY(-4px);
+          }
+        }
+      }
+
+      .connect-group {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid white;
+
+        .connect-item {
+          padding: 16px 8px;
+          border-bottom: 1px solid white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .contact-container {
+            display: flex;
+            gap: 12px;
+            margin: 10px 0px;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom-block {
+    height: 36px;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    border-top: 1px solid white;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      gap: 42px;
+    }
+  }
+}
