@@ -101,6 +101,7 @@
 
 .group-link {
   @extend .group-text;
+  text-wrap: nowrap;
 
   &:hover {
     text-decoration: underline;

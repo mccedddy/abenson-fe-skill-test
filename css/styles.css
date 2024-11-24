@@ -530,6 +530,9 @@ input {
   line-height: 22px;
 }
 
+.group-link {
+  text-wrap: nowrap;
+}
 .group-link:hover {
   text-decoration: underline;
   cursor: pointer;
@@ -1002,7 +1005,7 @@ input {
 
 .footer {
   width: 100%;
-  height: 569px;
+  padding: 20px 0px;
   background: #1e22aa url("../assets/bg/footer.png") repeat top center;
   background-size: contain;
   background-position: top center;
@@ -1010,23 +1013,44 @@ input {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 425px) {
+  .footer {
+    display: none;
+  }
+}
 
 .footer-content {
   width: 95%;
-  height: 531px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 30px;
 }
 .footer-content .top-block {
-  height: 465px;
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  .footer-content .top-block {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 .footer-content .top-block .left-content {
-  width: 440px;
-  height: 380px;
+  width: 100%;
+  min-width: 220px;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .footer-content .top-block .left-content {
+    max-width: 100%;
+    align-items: center;
+  }
+  .footer-content .top-block .left-content .sub-email-container {
+    width: 75%;
+  }
 }
 .footer-content .top-block .left-content .sub-email-container {
   position: relative;
@@ -1048,17 +1072,33 @@ input {
   width: 100%;
   margin: 15px 0px;
 }
+@media (max-width: 768px) {
+  .footer-content .top-block .left-content #abenson-rewards-banner {
+    width: 75%;
+  }
+}
 .footer-content .top-block .middle-content {
-  width: 378px;
-  height: 335px;
   display: flex;
   flex-direction: column;
   gap: 50px;
   margin: 0px 20px;
 }
+@media (max-width: 768px) {
+  .footer-content .top-block .middle-content {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0px;
+  }
+}
 .footer-content .top-block .middle-content .row {
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .footer-content .top-block .middle-content .row {
+    width: 50%;
+    justify-content: space-around;
+  }
 }
 .footer-content .top-block .middle-content .row .item-group {
   width: 150px;
@@ -1066,14 +1106,23 @@ input {
 .footer-content .top-block .middle-content .row .item-group #payment-methods-img {
   width: 85%;
 }
-.footer-content .top-block .right-content {
-  width: 308px;
-  height: 465px;
+@media (max-width: 768px) {
+  .footer-content .top-block .right-content {
+    margin-top: 50px;
+  }
+  .footer-content .top-block .right-content .socials-desktop {
+    display: none;
+  }
 }
 .footer-content .top-block .right-content .social-container {
   display: flex;
   gap: 32px;
   margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .footer-content .top-block .right-content .social-container {
+    justify-content: center;
+  }
 }
 .footer-content .top-block .right-content .social-container .social-item {
   transition: 0.2s ease-in-out;
@@ -1099,17 +1148,61 @@ input {
   gap: 12px;
   margin: 10px 0px;
 }
-.footer-content .bottom-block {
-  height: 36px;
+.footer-content .bottom-block-desktop {
   display: flex;
   justify-content: space-around;
-  align-items: end;
+  align-items: start;
+  padding-top: 16px;
   border-top: 1px solid white;
+  gap: 42px;
+  text-align: center;
 }
-.footer-content .bottom-block div {
+@media (max-width: 768px) {
+  .footer-content .bottom-block-desktop {
+    display: none;
+  }
+}
+.footer-content .bottom-block-desktop div {
   display: flex;
   justify-content: space-between;
   gap: 42px;
+}
+.footer-content .bottom-block-mobile {
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .footer-content .bottom-block-mobile {
+    display: flex;
+  }
+}
+.footer-content .bottom-block-mobile .top {
+  display: flex;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-bottom: 1px solid white;
+  flex-wrap: wrap;
+}
+.footer-content .bottom-block-mobile .top div {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer-content .bottom-block-mobile .top .group-link {
+  width: auto;
+}
+.footer-content .bottom-block-mobile .top .social-item {
+  transition: 0.2s ease-in-out;
+}
+.footer-content .bottom-block-mobile .top .social-item:hover {
+  cursor: pointer;
+  transform: translateY(-4px);
 }
 
 /*# sourceMappingURL=styles.css.map */

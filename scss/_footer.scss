@@ -2,31 +2,50 @@
 
 .footer {
   width: 100%;
-  height: 569px;
+  padding: 20px 0px;
   background: colors.$primary url("../assets/bg/footer.png") repeat top center;
   background-size: contain;
   background-position: top center;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 425px) {
+    display: none;
+  }
 }
 
 .footer-content {
   width: 95%;
-  height: 531px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 30px;
 
   .top-block {
-    height: 465px;
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+    }
+
     .left-content {
-      width: 440px;
-      height: 380px;
+      width: 100%;
+      min-width: 220px;
+      max-width: 440px;
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: 768px) {
+        max-width: 100%;
+        align-items: center;
+
+        .sub-email-container {
+          width: 75%;
+        }
+      }
 
       .sub-email-container {
         position: relative;
@@ -49,20 +68,33 @@
       #abenson-rewards-banner {
         width: 100%;
         margin: 15px 0px;
+
+        @media (max-width: 768px) {
+          width: 75%;
+        }
       }
     }
 
     .middle-content {
-      width: 378px;
-      height: 335px;
       display: flex;
       flex-direction: column;
       gap: 50px;
       margin: 0px 20px;
 
+      @media (max-width: 768px) {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 0px;
+      }
+
       .row {
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 768px) {
+          width: 50%;
+          justify-content: space-around;
+        }
 
         .item-group {
           width: 150px;
@@ -75,13 +107,22 @@
     }
 
     .right-content {
-      width: 308px;
-      height: 465px;
+      @media (max-width: 768px) {
+        margin-top: 50px;
+
+        .socials-desktop {
+          display: none;
+        }
+      }
 
       .social-container {
         display: flex;
         gap: 32px;
         margin-bottom: 20px;
+
+        @media (max-width: 768px) {
+          justify-content: center;
+        }
 
         .social-item {
           transition: 0.2s ease-in-out;
@@ -115,17 +156,65 @@
     }
   }
 
-  .bottom-block {
-    height: 36px;
+  .bottom-block-desktop {
     display: flex;
     justify-content: space-around;
-    align-items: end;
+    align-items: start;
+    padding-top: 16px;
     border-top: 1px solid white;
+    gap: 42px;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
 
     div {
       display: flex;
       justify-content: space-between;
       gap: 42px;
+    }
+  }
+
+  .bottom-block-mobile {
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      display: flex;
+    }
+
+    .top {
+      display: flex;
+      padding-bottom: 20px;
+      margin-bottom: 15px;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      border-bottom: 1px solid white;
+      flex-wrap: wrap;
+
+      div {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .group-link {
+        width: auto;
+      }
+
+      .social-item {
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+          cursor: pointer;
+          transform: translateY(-4px);
+        }
+      }
     }
   }
 }
