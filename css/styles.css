@@ -70,12 +70,12 @@ input {
   }
 }
 @keyframes header-drop-mid {
-  0%, 40% {
+  0%, 30% {
     transform: translateY(-104px);
   }
 }
 @keyframes header-drop-bot {
-  0%, 20% {
+  0%, 10% {
     transform: translateY(-138px);
   }
 }
