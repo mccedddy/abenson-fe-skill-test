@@ -17,7 +17,7 @@
       <section class="top-menu">
         <button type="button" class="top-menu-button">
           Our Shops
-          <img src="./assets/icons/trailingIcon.svg" alt="" />
+          <img src="./assets/icons/dropDownIcon.svg" alt="drop down icon" />
         </button>
         <div>
           <button type="button" class="top-menu-button">Store Locator</button>
@@ -25,7 +25,7 @@
           <button type="button" class="top-menu-button">Viber Chat</button>
           <button type="button" class="top-menu-button">
             <p>Download Abenson App</p>
-            <img src="./assets/icons/trailingIcon.svg" alt="trailing icon" />
+            <img src="./assets/icons/dropDownIcon.svg" alt="drop down icon" />
           </button>
         </div>
       </section>
@@ -418,7 +418,7 @@
         </div>
       </section>
 
-      <!-- <section class="jobs">
+      <section class="jobs">
         <h2 class="section-title">Featured Job Openings</h2>
         <div class="job-grid">
           <div class="job-card">
@@ -453,38 +453,41 @@
           </div>
         </div>
         <button type="button" id="see-all-jobs">See All</button>
-      </section> -->
+      </section>
 
       <section class="send">
-        <h2 class="section-title">Not on the List?</h2>
-        <h5 class="section-description">Send us your resume here!</h5>
+        <div>
+          <h2 class="section-title">Not on the List?</h2>
+          <h5 class="section-description">Send us your resume here!</h5>
+        </div>
 
-        <form class="send-form">
-          <div class="input">
+        <form class="send-form" id="resume-form">
+          <div class="input-field" id="name-field">
             <label for="name" class="input-label" id="name-label">Name</label>
+            <label for="name" class="error-text" id="name-error"></label>
             <input
               type="text"
               name="name"
               placeholder="Enter your full name"
-              required
+              id="name-input"
             />
           </div>
-          <div class="input">
-            <label for="email" class="input-label" id="email-label"
-              >Email</label
-            >
+          <div class="input-field" id="email-field">
+            <label for="email" class="input-label" id="email-label">Email</label
+            ><label for="name" class="error-text" id="email-error"></label>
             <input
               type="email"
               name="email"
               placeholder="Enter your email"
-              required
+              id="email-input"
             />
           </div>
-          <div class="input">
+          <div class="input-field" id="resume-field">
             <label for="resume" class="input-label" id="resume-label"
               >Attach Resume</label
             >
-            <div class="file-input">
+            <label for="resume" class="error-text" id="resume-error"></label>
+            <div class="resume-input" id="resume-input">
               <h6 id="file-name">No file chosen</h6>
               <button type="button" id="browse-file">Browse Files</button>
             </div>
@@ -492,10 +495,11 @@
               type="file"
               name="resume"
               placeholder="Resume.pdf"
-              required
+              id="file-input"
+              accept=".pdf, .doc, .docx"
             />
           </div>
-          <button type="submit" id="submit-resume">Submit</button>
+          <button type="button" id="submit-resume">Submit</button>
         </form>
       </section>
 
@@ -722,6 +726,6 @@
         </section>
       </section>
     </footer>
-    <script src="js/scripts.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

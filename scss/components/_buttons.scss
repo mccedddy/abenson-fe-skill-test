@@ -238,6 +238,8 @@
   @include button(white, $hover-up: false);
 
   height: 44px;
+  width: 50%;
+  max-width: 275px;
   border-radius: 22px;
 }
 
@@ -246,6 +248,8 @@
 
   height: 100%;
   width: 131px;
+  position: absolute;
+  right: 0px;
 }
 
 #submit-resume {

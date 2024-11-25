@@ -80,10 +80,13 @@
 }
 
 .job-title {
+  font-size: clamp(12px, 4vw, 18px);
   color: colors.$primary;
+  text-align: left;
 }
 
 .job-description {
+  font-size: clamp(10px, 4vw, 16px);
   font-weight: 400;
 }
 
