@@ -852,7 +852,7 @@ input {
 .about-us .section-description {
   width: 90%;
 }
-.about-us .mvc {
+.about-us .scroll-container {
   width: 100%;
   display: flex;
   gap: 20px;
@@ -861,19 +861,24 @@ input {
   text-align: start;
   padding: 0px 20px;
   box-sizing: border-box;
+  user-select: none;
+  cursor: grab;
   scrollbar-width: none;
   -ms-overflow-style: none;
   max-width: 1240px;
 }
-.about-us .mvc::-webkit-scrollbar {
+.about-us .scroll-container:active {
+  cursor: grabbing;
+}
+.about-us .scroll-container::-webkit-scrollbar {
   display: none;
 }
 @media (max-width: 768px) {
-  .about-us .mvc {
+  .about-us .scroll-container {
     gap: 10px;
   }
 }
-.about-us .mvc .mvc-card {
+.about-us .scroll-container .mvc-card {
   height: 425px;
   width: auto;
   box-sizing: border-box;
@@ -881,19 +886,19 @@ input {
   display: flex;
 }
 @media (max-width: 768px) {
-  .about-us .mvc .mvc-card {
+  .about-us .scroll-container .mvc-card {
     height: 300px;
   }
 }
 @media (max-width: 425px) {
-  .about-us .mvc .mvc-card {
+  .about-us .scroll-container .mvc-card {
     height: 188px;
   }
 }
-.about-us .mvc .mvc-card img {
+.about-us .scroll-container .mvc-card img {
   border-radius: 20px;
 }
-.about-us .mvc .mvc-card::after {
+.about-us .scroll-container .mvc-card::after {
   content: "";
   position: absolute;
   top: 0;
@@ -904,7 +909,7 @@ input {
   border-radius: 20px;
   background: linear-gradient(to bottom right, rgb(255, 255, 255), rgba(255, 255, 255, 0) 25%);
 }
-.about-us .mvc .mvc-card .mvc-content {
+.about-us .scroll-container .mvc-card .mvc-content {
   height: 100%;
   position: absolute;
   display: flex;
@@ -914,12 +919,12 @@ input {
   box-sizing: border-box;
 }
 @media (max-width: 768px) {
-  .about-us .mvc .mvc-card .mvc-content {
+  .about-us .scroll-container .mvc-card .mvc-content {
     padding: 16px;
   }
 }
 @media (max-width: 425px) {
-  .about-us .mvc .mvc-card .mvc-content {
+  .about-us .scroll-container .mvc-card .mvc-content {
     padding: 12px;
   }
 }
@@ -940,7 +945,7 @@ input {
     padding: 10px 0px;
   }
 }
-.join .join-container {
+.join .scroll-container {
   width: 100%;
   display: flex;
   gap: 20px;
@@ -949,13 +954,18 @@ input {
   text-align: start;
   padding: 0px 20px;
   box-sizing: border-box;
+  user-select: none;
+  cursor: grab;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
-.join .join-container::-webkit-scrollbar {
+.join .scroll-container:active {
+  cursor: grabbing;
+}
+.join .scroll-container::-webkit-scrollbar {
   display: none;
 }
-.join .join-container .join-card {
+.join .scroll-container .join-card {
   height: 100%;
   width: 20vw;
   min-width: 220px;
@@ -965,13 +975,13 @@ input {
   gap: 16px;
 }
 @media (max-width: 768px) {
-  .join .join-container .join-card {
+  .join .scroll-container .join-card {
     align-items: center;
     text-align: center;
     min-width: 125px;
   }
 }
-.join .join-container .join-card img {
+.join .scroll-container .join-card img {
   height: 95px;
   width: 140px;
 }
@@ -993,7 +1003,7 @@ input {
     padding: 10px 0px;
   }
 }
-.teams .scroll-container {
+.teams .teams-scroll-container {
   width: 100%;
   position: relative;
   display: flex;

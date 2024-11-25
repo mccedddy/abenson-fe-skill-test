@@ -20,6 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const jobGrid = document.querySelector(".job-grid");
   const expandButton = document.getElementById("see-all-jobs");
 
+  // Scroll containers
+  const scrollContainers = document.querySelectorAll(".scroll-container");
+
   // Teams scroll
   const scrollWrapper = document.querySelector(".teams-scroll");
   const scrollLeftButton = document.getElementById("scroll-left");
@@ -61,6 +64,41 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       fileNameDisplay.textContent = "No file chosen";
     }
+  });
+
+  // Scroll drag handler
+  scrollContainers.forEach((container) => {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    container.addEventListener("mousedown", (e) => {
+      isDown = true;
+      container.classList.add("active");
+      document.body.classList.add("no-select");
+      startX = e.pageX - container.offsetLeft;
+      scrollLeft = container.scrollLeft;
+    });
+
+    container.addEventListener("mouseleave", () => {
+      isDown = false;
+      container.classList.remove("active");
+      document.body.classList.remove("no-select");
+    });
+
+    container.addEventListener("mouseup", () => {
+      isDown = false;
+      container.classList.remove("active");
+      document.body.classList.remove("no-select");
+    });
+
+    container.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - container.offsetLeft;
+      const walk = x - startX;
+      container.scrollLeft = scrollLeft - walk;
+    });
   });
 
   // Validate form
