@@ -352,14 +352,21 @@
   .job-grid {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 20px;
     padding: 28px;
     box-sizing: border-box;
+    overflow: auto;
+    max-height: 435px;
+    transition: 0.3s ease;
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
       padding: 20px 30px;
+    }
+
+    &.expanded {
+      max-height: none;
     }
 
     .job-card {

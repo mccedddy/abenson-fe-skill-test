@@ -15,6 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const emailError = document.getElementById("email-error");
   const resumeError = document.getElementById("resume-error");
 
+  // Job grid
+  const jobGrid = document.querySelector(".job-grid");
+  const expandButton = document.getElementById("see-all-jobs");
+  let isExpanded = false;
+
   // Event listeners
   submitButton.addEventListener("click", () => {
     validateForm();
@@ -22,6 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   browseFileButton.addEventListener("click", () => {
     resumeInput.click();
+  });
+
+  expandButton.addEventListener("click", () => {
+    toggleExpandJobs();
   });
 
   // Display file name
@@ -74,6 +83,19 @@ document.addEventListener("DOMContentLoaded", () => {
       form.submit();
     } else {
       alert("Please correct the highlighted fields.");
+    }
+  };
+
+  // See all jobs
+  const toggleExpandJobs = () => {
+    isExpanded = !isExpanded;
+
+    if (isExpanded) {
+      jobGrid.classList.add("expanded");
+      expandButton.textContent = "See Less";
+    } else {
+      jobGrid.classList.remove("expanded");
+      expandButton.textContent = "See All";
     }
   };
 });

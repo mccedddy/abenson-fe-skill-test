@@ -547,7 +547,7 @@ input {
 }
 
 .job-title {
-  font-size: clamp(12px, 4vw, 18px);
+  font-size: clamp(12px, 4vw, 17px);
   color: #1e22aa;
   text-align: left;
 }
@@ -1038,16 +1038,22 @@ input {
 .jobs .job-grid {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
   padding: 28px;
   box-sizing: border-box;
+  overflow: auto;
+  max-height: 435px;
+  transition: 0.3s ease;
 }
 @media (max-width: 768px) {
   .jobs .job-grid {
     grid-template-columns: 1fr;
     padding: 20px 30px;
   }
+}
+.jobs .job-grid.expanded {
+  max-height: none;
 }
 .jobs .job-grid .job-card {
   padding: 20px;
