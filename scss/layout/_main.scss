@@ -424,6 +424,17 @@
       }
     }
 
+    .input-label {
+      position: absolute;
+      z-index: 1;
+      left: 10px;
+      top: -8px;
+      padding: 0px 4px;
+      box-sizing: border-box;
+      background-color: colors.$white;
+      color: colors.$text-light;
+    }
+
     .input-field {
       position: relative;
       display: flex;
@@ -436,7 +447,7 @@
         height: 44px;
         width: 330px;
         max-width: 330px;
-        border: 1px solid colors.$primary-light;
+        border: 1px solid colors.$light-darker;
         border-radius: 28px;
         position: relative;
         padding: 14px;
@@ -446,28 +457,14 @@
         align-items: center;
 
         &:focus {
-          outline: 1px solid colors.$primary-light;
+          border: 1px solid colors.$primary-light;
+          outline: none;
+
+          + #name-label,
+          + #email-label {
+            color: colors.$primary-light;
+          }
         }
-      }
-
-      .input-label {
-        position: absolute;
-        z-index: 1;
-        left: 10px;
-        top: -8px;
-        padding: 0px 4px;
-        box-sizing: border-box;
-        background-color: colors.$white;
-        color: colors.$primary-light;
-      }
-
-      #resume-label {
-        color: colors.$text-light;
-      }
-
-      #resume-input {
-        border: 1px solid colors.$light-darker;
-        padding: 0px 0px 0px 14px;
       }
 
       #file-name {

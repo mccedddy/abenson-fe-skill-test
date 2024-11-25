@@ -43,6 +43,7 @@
           src="./assets/icons/abensonLogo.svg"
           class="abenson-logo"
           alt="abenson logo"
+          onclick="location.reload();"
         />
         <div class="input-container">
           <input type="text" id="search-bar" placeholder="Search" />
@@ -683,14 +684,14 @@
             data-aos-duration="500"
             data-aos-easing="ease-out-cubic"
           >
-            <label for="name" class="input-label" id="name-label">Name</label>
-            <label for="name" class="error-text" id="name-error"></label>
             <input
               type="text"
               name="name"
               placeholder="Enter your full name"
               id="name-input"
             />
+            <label for="name" class="input-label" id="name-label">Name</label>
+            <label for="name" class="error-text" id="name-error"></label>
           </div>
           <div
             class="input-field"
@@ -699,14 +700,14 @@
             data-aos-duration="500"
             data-aos-easing="ease-out-cubic"
           >
-            <label for="email" class="input-label" id="email-label">Email</label
-            ><label for="name" class="error-text" id="email-error"></label>
             <input
               type="email"
               name="email"
               placeholder="Enter your email"
               id="email-input"
             />
+            <label for="email" class="input-label" id="email-label">Email</label
+            ><label for="name" class="error-text" id="email-error"></label>
           </div>
           <div
             class="input-field"
@@ -715,14 +716,16 @@
             data-aos-duration="500"
             data-aos-easing="ease-out-cubic"
           >
-            <label for="resume" class="input-label" id="resume-label"
-              >Attach Resume</label
-            >
-            <label for="resume" class="error-text" id="resume-error"></label>
             <div class="resume-input" id="resume-input">
               <h6 id="file-name">No file chosen</h6>
               <button type="button" id="browse-file">Browse Files</button>
             </div>
+            <label for="resume" class="input-label" id="resume-label"
+              >Attach Resume</label
+            >
+            <label for="resume" class="error-text" id="resume-error"></label>
+
+            <!-- Hidden -->
             <input
               type="file"
               name="resume"

@@ -76,7 +76,7 @@ input {
   }
 }
 @keyframes header-drop-bot {
-  0%, 10% {
+  0%, 15% {
     transform: translateY(-138px);
   }
 }
@@ -521,6 +521,9 @@ input {
 }
 .middle-menu .abenson-logo {
   width: clamp(106px, 20vw, 160px);
+}
+.middle-menu .abenson-logo:hover {
+  cursor: pointer;
 }
 .middle-menu .input-container {
   width: 100%;
@@ -1255,6 +1258,16 @@ input {
 .send .send-form .input-field.invalid #resume-input {
   border-color: #ff4f44;
 }
+.send .send-form .input-label {
+  position: absolute;
+  z-index: 1;
+  left: 10px;
+  top: -8px;
+  padding: 0px 4px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #575757;
+}
 .send .send-form .input-field {
   position: relative;
   display: flex;
@@ -1267,7 +1280,7 @@ input {
   height: 44px;
   width: 330px;
   max-width: 330px;
-  border: 1px solid #185baa;
+  border: 1px solid #bbbcbd;
   border-radius: 28px;
   position: relative;
   padding: 14px;
@@ -1279,24 +1292,16 @@ input {
 .send .send-form .input-field #name-input:focus,
 .send .send-form .input-field #email-input:focus,
 .send .send-form .input-field #resume-input:focus {
-  outline: 1px solid #185baa;
+  border: 1px solid #185baa;
+  outline: none;
 }
-.send .send-form .input-field .input-label {
-  position: absolute;
-  z-index: 1;
-  left: 10px;
-  top: -8px;
-  padding: 0px 4px;
-  box-sizing: border-box;
-  background-color: #ffffff;
+.send .send-form .input-field #name-input:focus + #name-label,
+.send .send-form .input-field #name-input:focus + #email-label,
+.send .send-form .input-field #email-input:focus + #name-label,
+.send .send-form .input-field #email-input:focus + #email-label,
+.send .send-form .input-field #resume-input:focus + #name-label,
+.send .send-form .input-field #resume-input:focus + #email-label {
   color: #185baa;
-}
-.send .send-form .input-field #resume-label {
-  color: #575757;
-}
-.send .send-form .input-field #resume-input {
-  border: 1px solid #bbbcbd;
-  padding: 0px 0px 0px 14px;
 }
 .send .send-form .input-field #file-name {
   max-width: 175px;
@@ -1374,7 +1379,7 @@ input {
   display: flex;
   justify-content: space-between;
 }
-@media (max-width: 768px) {
+@media (max-width: 855px) {
   .footer-content .top-block {
     flex-direction: column;
     text-align: center;
@@ -1387,7 +1392,7 @@ input {
   display: flex;
   flex-direction: column;
 }
-@media (max-width: 768px) {
+@media (max-width: 855px) {
   .footer-content .top-block .left-content {
     max-width: 100%;
     align-items: center;
@@ -1416,7 +1421,7 @@ input {
   width: 100%;
   margin: 15px 0px;
 }
-@media (max-width: 768px) {
+@media (max-width: 855px) {
   .footer-content .top-block .left-content #abenson-rewards-banner {
     width: 75%;
   }
@@ -1427,7 +1432,7 @@ input {
   gap: 50px;
   margin: 0px 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: 855px) {
   .footer-content .top-block .middle-content {
     flex-direction: row;
     justify-content: space-around;
@@ -1438,7 +1443,7 @@ input {
   display: flex;
   justify-content: space-between;
 }
-@media (max-width: 768px) {
+@media (max-width: 855px) {
   .footer-content .top-block .middle-content .row {
     width: 50%;
     justify-content: space-around;
@@ -1455,7 +1460,7 @@ input {
 .footer-content .top-block .middle-content .row .item-group #payment-methods-img {
   width: 85%;
 }
-@media (max-width: 768px) {
+@media (max-width: 855px) {
   .footer-content .top-block .right-content {
     margin-top: 50px;
   }
@@ -1473,7 +1478,7 @@ input {
     gap: 22px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 855px) {
   .footer-content .top-block .right-content .social-container {
     justify-content: center;
   }
@@ -1511,7 +1516,7 @@ input {
   gap: 42px;
   text-align: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 855px) {
   .footer-content .bottom-block-desktop {
     display: none;
   }
@@ -1527,7 +1532,7 @@ input {
   flex-direction: column;
   text-align: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 855px) {
   .footer-content .bottom-block-mobile {
     display: flex;
   }

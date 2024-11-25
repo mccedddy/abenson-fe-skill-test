@@ -66,6 +66,10 @@
 
   .abenson-logo {
     width: clamp(106px, 20vw, 160px);
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .input-container {

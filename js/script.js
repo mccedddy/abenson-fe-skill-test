@@ -138,6 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Reset states
     nameContainer.classList.remove("invalid");
     emailContainer.classList.remove("invalid");
+    resumeContainer.classList.remove("invalid");
     nameError.innerHTML = "";
     emailError.innerHTML = "";
     resumeError.innerHTML = "";
@@ -181,7 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
       isValid = false;
       resumeError.innerHTML = "Please attach your resume.";
       resumeContainer.classList.add("shake");
-
+      resumeContainer.classList.add("invalid");
       setTimeout(() => {
         resumeContainer.classList.remove("shake");
       }, 200);
