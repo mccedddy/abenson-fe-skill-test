@@ -29,6 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const scrollRightButton = document.getElementById("scroll-right");
   const scrollAmount = 300;
 
+  // Teams button
+  const teamCardButtons = document.querySelectorAll(".team-card-button");
+
   // Follow
   const facebookButton = document.getElementById("follow-facebook");
   const jobstreetButton = document.getElementById("follow-jobstreet");
@@ -102,6 +105,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const x = e.pageX - container.offsetLeft;
       const walk = x - startX;
       container.scrollLeft = scrollLeft - walk;
+    });
+  });
+
+  // Teams button link
+  teamCardButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      window.open("https://recruitment.dataon.com/abensongroup/#", "_blank");
     });
   });
 
