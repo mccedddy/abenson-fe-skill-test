@@ -1,7 +1,7 @@
 # Front-End Developer Skill Test #
 
 ### Abenson Careers Landing Page ###
-This is the submission for the **Abenson Front-End Developer Skill Test**. This features a fully responsive and interactive **Abenson Careers Landing Page**, created using **HTML**, **CSS**, and **SASS**.
+This is the submission for the **Abenson Front-End Developer Skill Test**. This features a fully responsive and interactive **Abenson Careers Landing Page**, created using **HTML**, **CSS**, **SASS**, and **JavaScript**.
 
 ## How to Open the File ##
 1. **Download the Project**
