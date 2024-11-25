@@ -110,6 +110,16 @@
 .follow-text {
   text-align: left;
   font-weight: 400;
+  line-height: 21px;
+  font-size: 14px;
+  color: colors.$text;
+  font-weight: 400;
+  text-wrap: wrap;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
 
 // Footer

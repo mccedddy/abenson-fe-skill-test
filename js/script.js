@@ -27,8 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const scrollWrapper = document.querySelector(".teams-scroll");
   const scrollLeftButton = document.getElementById("scroll-left");
   const scrollRightButton = document.getElementById("scroll-right");
-
   const scrollAmount = 300;
+
+  // Follow
+  const facebookButton = document.getElementById("follow-facebook");
+  const jobstreetButton = document.getElementById("follow-jobstreet");
+  const linkedinButton = document.getElementById("follow-linkedin");
 
   // Event listeners
   submitButton.addEventListener("click", () => {
@@ -99,6 +103,22 @@ document.addEventListener("DOMContentLoaded", () => {
       const walk = x - startX;
       container.scrollLeft = scrollLeft - walk;
     });
+  });
+
+  // Follow links
+  facebookButton.addEventListener("click", () => {
+    window.open("https://www.facebook.com/abensonappliances/", "_blank");
+  });
+
+  jobstreetButton.addEventListener("click", () => {
+    window.open(
+      "https://ph.jobstreet.com/companies/abenson-168555984227140",
+      "_blank"
+    );
+  });
+
+  linkedinButton.addEventListener("click", () => {
+    window.open("https://www.linkedin.com/company/abenson/", "_blank");
   });
 
   // Validate form

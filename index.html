@@ -126,11 +126,15 @@
           >
             <button id="check-openings-button" class="banner-button">
               <h5 class="mobile button-text">Openings</h5>
-              <h5 class="desktop button-text">Check for Openings</h5>
+              <h5 class="desktop button-text" onclick="location.href='#jobs'">
+                Check for Openings
+              </h5>
             </button>
             <button id="submit-resume-button" class="banner-button">
               <h5 class="mobile button-text">Submit</h5>
-              <h5 class="desktop button-text">Submit Resume</h5>
+              <h5 class="desktop button-text" onclick="location.href='#send'">
+                Submit Resume
+              </h5>
             </button>
           </div>
         </div>
@@ -573,6 +577,7 @@
 
       <section
         class="jobs"
+        id="jobs"
         data-aos="fade-up"
         data-aos-duration="1000"
         data-aos-easing="ease-out-cubic"
@@ -660,6 +665,7 @@
 
       <section
         class="send"
+        id="send"
         data-aos="fade-up"
         data-aos-duration="1000"
         data-aos-easing="ease-out-cubic"
@@ -746,8 +752,10 @@
         <h2 class="section-title">Follow Us</h2>
 
         <div class="follow-container">
-          <div
-            class="follow-tile"
+          <button
+            type="button"
+            class="follow-button"
+            id="follow-facebook"
             data-aos="zoom-out"
             data-aos-duration="500"
             data-aos-easing="ease-out-cubic"
@@ -758,9 +766,11 @@
               <h6 class="follow-text">Facebook</h6>
               <h6 class="follow-text">Abenson Careers</h6>
             </div>
-          </div>
-          <div
-            class="follow-tile"
+          </button>
+          <button
+            type="button"
+            class="follow-button"
+            id="follow-jobstreet"
             data-aos="zoom-out"
             data-aos-duration="500"
             data-aos-easing="ease-out-cubic"
@@ -771,9 +781,11 @@
               <h6 class="follow-text">Jobstreet</h6>
               <h6 class="follow-text">Abenson Ventures Inc</h6>
             </div>
-          </div>
-          <div
-            class="follow-tile"
+          </button>
+          <button
+            type="button"
+            class="follow-button"
+            id="follow-linkedin"
             data-aos="zoom-out"
             data-aos-duration="500"
             data-aos-easing="ease-out-cubic"
@@ -784,7 +796,7 @@
               <h6 class="follow-text">LinkedIn</h6>
               <h6 class="follow-text">Abenson</h6>
             </div>
-          </div>
+          </button>
         </div>
       </section>
     </main>

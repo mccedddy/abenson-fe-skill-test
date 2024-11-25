@@ -24,7 +24,7 @@
   // Hover
   @if $hover-up == true {
     &:hover {
-      transform: translateY(-4px);
+      transform: translateY(-4px) scale(1.05);
     }
     &:active {
       transform: translateY(0px);
@@ -36,8 +36,7 @@
       @if $type == primary {
         background-color: colors.$primary;
       } @else if $type == white {
-        color: colors.$white;
-        background-color: colors.$primary-light;
+        border: 3px solid colors.$primary-light;
       }
     }
   }
@@ -279,7 +278,7 @@
 
 // Jobs
 #see-all-jobs {
-  @include button(white, $hover-up: false);
+  @include button(white);
 
   height: 44px;
   width: 50%;
@@ -299,6 +298,31 @@
 
 #submit-resume {
   @include button;
+}
+
+// Follow
+.follow-button {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 16px;
+  border: 0px;
+  background-color: colors.$white;
+
+  &:hover {
+    cursor: pointer;
+    background-color: colors.$light;
+  }
+
+  @media (max-width: 425px) {
+    gap: 4px;
+    padding: 4px;
+  }
+
+  img {
+    height: 3vw;
+    min-height: 40px;
+  }
 }
 
 // Footer

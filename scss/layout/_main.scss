@@ -490,32 +490,22 @@
 
   .follow-container {
     display: flex;
-    gap: 40px;
+    gap: 20px;
     padding: 0px 10px;
 
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
       gap: 10px;
     }
 
-    .follow-tile {
+    @media (max-width: 425px) {
+      gap: 0px;
+    }
+
+    .follow-text-container {
       display: flex;
-      gap: 16px;
-
-      @media (max-width: 425px) {
-        gap: 4px;
-      }
-
-      img {
-        height: 3vw;
-        min-height: 40px;
-      }
-
-      .follow-text-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: start;
-      }
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
     }
   }
 }
