@@ -1,5 +1,6 @@
 @use "../utils/global";
 @use "../utils/colors";
+@use "../utils/keyframes";
 
 @mixin button($type: primary, $hover-up: true, $hover-color: true) {
   height: 44px;
@@ -58,7 +59,7 @@
 
   &:hover {
     color: colors.$primary;
-    transform: translateY(-1px);
+    transform: translateY(-1px) scale(1.2);
   }
 
   &:active {
@@ -94,15 +95,15 @@
   background-color: transparent;
   position: absolute;
   margin-right: 10px;
-  transition: 0.2s ease-out;
+  transition: 0.1s ease-out;
   border: 0px;
 
   &:hover {
-    transform: translateY(-2px);
+    transform: scale(1.1);
   }
 
   &:active {
-    transform: translateY(1px);
+    transform: scale(1);
   }
 }
 
@@ -139,7 +140,7 @@
 
   &:hover {
     color: colors.$primary;
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.2);
   }
 
   &:active {

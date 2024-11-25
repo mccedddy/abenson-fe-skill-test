@@ -63,6 +63,17 @@ input {
   color: #4c525c;
 }
 
+@keyframes error-shake {
+  3%, 21%, 39%, 57%, 74%, 92% {
+    transform: translateX(5px);
+  }
+  6%, 24%, 42%, 60%, 77%, 95% {
+    transform: translateX(3px);
+  }
+  9%, 27%, 45%, 63%, 80%, 98% {
+    transform: translateX(-5px);
+  }
+}
 .top-menu-button {
   height: 22px;
   border: 0px;
@@ -79,7 +90,7 @@ input {
 }
 .top-menu-button:hover {
   color: #1e22aa;
-  transform: translateY(-1px);
+  transform: translateY(-1px) scale(1.2);
 }
 .top-menu-button:active {
   transform: translateY(1px);
@@ -111,14 +122,14 @@ input {
   background-color: transparent;
   position: absolute;
   margin-right: 10px;
-  transition: 0.2s ease-out;
+  transition: 0.1s ease-out;
   border: 0px;
 }
 #search-button:hover {
-  transform: translateY(-2px);
+  transform: scale(1.1);
 }
 #search-button:active {
-  transform: translateY(1px);
+  transform: scale(1);
 }
 
 @media (max-width: 768px) {
@@ -153,7 +164,7 @@ input {
 }
 .bottom-menu-button:hover {
   color: #1e22aa;
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.2);
 }
 .bottom-menu-button:active {
   transform: translateY(2px);
@@ -707,14 +718,12 @@ input {
 @media (max-width: 768px) {
   .main {
     width: 100%;
-    gap: 20px;
     margin-top: -20px;
   }
 }
 @media (max-width: 425px) {
   .main {
     width: 100%;
-    gap: 10px;
   }
 }
 
@@ -1085,18 +1094,15 @@ input {
   gap: 20px;
   padding: 28px;
   box-sizing: border-box;
-  overflow: auto;
+  overflow: hidden;
   max-height: 435px;
-  transition: 0.3s ease;
+  transition: 0.8s ease-out;
 }
 @media (max-width: 768px) {
   .jobs .job-grid {
     grid-template-columns: 1fr;
     padding: 20px 30px;
   }
-}
-.jobs .job-grid.expanded {
-  max-height: none;
 }
 .jobs .job-grid .job-card {
   padding: 20px;
@@ -1136,6 +1142,9 @@ input {
   text-align: left;
   flex-direction: column;
   gap: 16px;
+}
+.send .send-form .shake {
+  animation: 1s error-shake infinite;
 }
 .send .send-form .input-field.invalid .input-label {
   color: #ff4f44;

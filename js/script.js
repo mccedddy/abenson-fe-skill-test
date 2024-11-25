@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("resume-form");
   const nameContainer = document.getElementById("name-field");
   const emailContainer = document.getElementById("email-field");
+  const resumeContainer = document.getElementById("resume-field");
   const nameInput = document.getElementById("name-input");
   const emailInput = document.getElementById("email-input");
   const resumeInput = document.getElementById("file-input");
@@ -18,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Job grid
   const jobGrid = document.querySelector(".job-grid");
   const expandButton = document.getElementById("see-all-jobs");
-  let isExpanded = false;
 
   // Teams scroll
   const scrollWrapper = document.querySelector(".teams-scroll");
@@ -78,7 +78,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (nameInput.value.trim() === "") {
       isValid = false;
       nameContainer.classList.add("invalid");
+      nameContainer.classList.add("shake");
       nameError.innerHTML = "Please enter your name.";
+
+      setTimeout(() => {
+        nameContainer.classList.remove("shake");
+      }, 200);
     }
 
     // Validate email input
@@ -86,37 +91,50 @@ document.addEventListener("DOMContentLoaded", () => {
     if (emailInput.value.trim() === "") {
       isValid = false;
       emailContainer.classList.add("invalid");
+      emailContainer.classList.add("shake");
       emailError.innerHTML = "Please enter your email.";
+
+      setTimeout(() => {
+        emailContainer.classList.remove("shake");
+      }, 200);
     } else if (!emailRegex.test(emailInput.value.trim())) {
       isValid = false;
       emailContainer.classList.add("invalid");
+      emailContainer.classList.add("shake");
       emailError.innerHTML = "Please enter a valid email.";
+
+      setTimeout(() => {
+        emailContainer.classList.remove("shake");
+      }, 200);
     }
 
     // Validate resume input
     if (resumeInput.files.length === 0) {
       isValid = false;
       resumeError.innerHTML = "Please attach your resume.";
+      resumeContainer.classList.add("shake");
+
+      setTimeout(() => {
+        resumeContainer.classList.remove("shake");
+      }, 200);
     }
 
     if (isValid) {
       alert("Form submitted.");
       form.submit();
-    } else {
-      alert("Please correct the highlighted fields.");
     }
   };
 
   // See all jobs
   const toggleExpandJobs = () => {
-    isExpanded = !isExpanded;
-
-    if (isExpanded) {
-      jobGrid.classList.add("expanded");
-      expandButton.textContent = "See Less";
-    } else {
+    if (jobGrid.classList.contains("expanded")) {
       jobGrid.classList.remove("expanded");
+      jobGrid.style.maxHeight = "435px";
       expandButton.textContent = "See All";
+    } else {
+      jobGrid.classList.add("expanded");
+      jobGrid.style.maxHeight = jobGrid.scrollHeight + "px";
+      expandButton.textContent = "See Less";
     }
   };
 });

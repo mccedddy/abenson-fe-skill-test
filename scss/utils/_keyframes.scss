@@ -1,0 +1,26 @@
+@keyframes error-shake {
+  3%,
+  21%,
+  39%,
+  57%,
+  74%,
+  92% {
+    transform: translateX(5px);
+  }
+  6%,
+  24%,
+  42%,
+  60%,
+  77%,
+  95% {
+    transform: translateX(3px);
+  }
+  9%,
+  27%,
+  45%,
+  63%,
+  80%,
+  98% {
+    transform: translateX(-5px);
+  }
+}
