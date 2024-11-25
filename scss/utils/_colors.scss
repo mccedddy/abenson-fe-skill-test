@@ -1,19 +1,27 @@
-$primary: #1e22aa;
-$primary-light: #185baa;
-$primary-dark: #151877;
-$light-blue: #e5f6ff;
-
-$secondary: #fae100;
-
-$white: #ffffff;
-$white-fade: rgba(255, 255, 255, 0.5);
-$light: #f1f2f6;
-$light-dark: #e3e3e3;
-$light-darker: #bbbcbd;
-
+// Colors
+$blue: #1e22aa;
+$blue-light: #185baa;
+$blue-dark: #151877;
+$blue-very-light: #e5f6ff;
+$yellow: #fae100;
 $red: #ff4f44;
+$white: #ffffff;
+$light: #f1f2f6;
+$light-dark: #bbbcbd;
+$gray: #4c525c;
+$gray-light: #575757;
+$white-fade: rgba(255, 255, 255, 0.5);
+$fade: rgba(255, 255, 255, 0.2);
 
-$text: #4c525c;
-$text-light: #575757;
-
-$faded: rgba(255, 255, 255, 0.2);
+// Project Colors
+$primary: $blue;
+$primary-light: $blue-light;
+$primary-dark: $blue-dark;
+$secondary: $yellow;
+$text: $gray;
+$text-light: $gray-light;
+$error: $red;
+$header-top: $light;
+$search-bar-bg: $fade;
+$input-border: $light-dark;
+$footer-border: $white-fade;

@@ -27,7 +27,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: colors.$light;
+  background-color: colors.$header-top;
   z-index: 3;
   animation: 0.5s header-drop-top ease-out;
   position: absolute;
@@ -85,7 +85,7 @@
       box-sizing: border-box;
       border: 0px;
       border-radius: 22px;
-      background-color: colors.$faded;
+      background-color: colors.$search-bar-bg;
       color: colors.$white;
       font-size: 14px;
       outline: none;

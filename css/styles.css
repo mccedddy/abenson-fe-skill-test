@@ -619,8 +619,7 @@ input {
 .mvc-description {
   font-size: 24px;
   font-weight: 600;
-  color: #f1f2f6;
-  color: #fff;
+  color: #ffffff;
 }
 @media (max-width: 768px) {
   .mvc-description {

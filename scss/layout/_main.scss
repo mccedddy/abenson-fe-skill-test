@@ -355,8 +355,8 @@
 
   padding: 50px;
   box-sizing: border-box;
-  background: colors.$light-blue url("../assets/bg/jobsBg.svg") no-repeat top
-    center;
+  background: colors.$blue-very-light url("../assets/bg/jobsBg.svg") no-repeat
+    top center;
   background-size: auto;
   background-position: top center;
   border-radius: 22px;
@@ -414,13 +414,13 @@
 
     .input-field.invalid {
       .input-label {
-        color: colors.$red;
+        color: colors.$error;
       }
 
       #name-input,
       #email-input,
       #resume-input {
-        border-color: colors.$red;
+        border-color: colors.$error;
       }
     }
 
@@ -447,7 +447,7 @@
         height: 44px;
         width: 330px;
         max-width: 330px;
-        border: 1px solid colors.$light-darker;
+        border: 1px solid colors.$input-border;
         border-radius: 28px;
         position: relative;
         padding: 14px;

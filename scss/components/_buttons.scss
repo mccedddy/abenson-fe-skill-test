@@ -56,7 +56,7 @@
   justify-content: center;
   gap: 4px;
   transition: 0.2s ease-in-out;
-  background-color: colors.$light;
+  background-color: colors.$header-top;
 
   &:hover {
     color: colors.$primary;
@@ -311,7 +311,7 @@
 
   &:hover {
     cursor: pointer;
-    background-color: colors.$light;
+    background-color: colors.$header-top;
   }
 
   @media (max-width: 425px) {
