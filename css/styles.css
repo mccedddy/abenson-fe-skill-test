@@ -519,19 +519,21 @@ input {
     top: 0px;
   }
 }
-.middle-menu .abenson-logo {
+
+.abenson-logo {
   width: clamp(106px, 20vw, 160px);
 }
-.middle-menu .abenson-logo:hover {
+.abenson-logo:hover {
   cursor: pointer;
 }
-.middle-menu .input-container {
+
+.input-container {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: end;
 }
-.middle-menu .input-container #search-bar {
+.input-container #search-bar {
   width: 100%;
   height: 40px;
   padding: 5px 8px 5px 12px;
@@ -544,10 +546,11 @@ input {
   outline: none;
   position: relative;
 }
-.middle-menu .input-container #search-bar::placeholder {
+.input-container #search-bar::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
-.middle-menu .buttons-container {
+
+.buttons-container {
   display: flex;
   gap: 15px;
 }
@@ -1374,17 +1377,19 @@ input {
   justify-content: space-between;
   gap: 30px;
 }
-.footer-content .top-block {
+
+.top-footer {
   display: flex;
   justify-content: space-between;
 }
 @media (max-width: 855px) {
-  .footer-content .top-block {
+  .top-footer {
     flex-direction: column;
     text-align: center;
   }
 }
-.footer-content .top-block .left-content {
+
+.left-content {
   width: 100%;
   min-width: 220px;
   max-width: 440px;
@@ -1392,21 +1397,23 @@ input {
   flex-direction: column;
 }
 @media (max-width: 855px) {
-  .footer-content .top-block .left-content {
+  .left-content {
     max-width: 100%;
     align-items: center;
   }
-  .footer-content .top-block .left-content .sub-email-container {
-    width: 75%;
-  }
 }
-.footer-content .top-block .left-content .sub-email-container {
+
+.sub-email-container {
+  width: 75%;
+}
+
+.sub-email-container {
   position: relative;
   display: flex;
   justify-content: end;
   margin: 10px 0px;
 }
-.footer-content .top-block .left-content .sub-email-container #sub-email {
+.sub-email-container #sub-email {
   width: 100%;
   height: 44px;
   padding: 6px 0px 6px 12px;
@@ -1416,97 +1423,108 @@ input {
   border: 0px;
   outline: 0px;
 }
-.footer-content .top-block .left-content #abenson-rewards-banner {
+
+#abenson-rewards-banner {
   width: 100%;
   margin: 15px 0px;
 }
 @media (max-width: 855px) {
-  .footer-content .top-block .left-content #abenson-rewards-banner {
+  #abenson-rewards-banner {
     width: 75%;
   }
 }
-.footer-content .top-block .middle-content {
+
+.middle-content {
   display: flex;
   flex-direction: column;
   gap: 50px;
   margin: 0px 20px;
 }
 @media (max-width: 855px) {
-  .footer-content .top-block .middle-content {
+  .middle-content {
     flex-direction: row;
     justify-content: space-around;
     gap: 0px;
   }
 }
-.footer-content .top-block .middle-content .row {
+
+.middle-row {
   display: flex;
   justify-content: space-between;
 }
 @media (max-width: 855px) {
-  .footer-content .top-block .middle-content .row {
+  .middle-row {
     width: 50%;
     justify-content: space-around;
   }
 }
-.footer-content .top-block .middle-content .row .item-group {
+
+.item-group {
   width: 150px;
 }
 @media (max-width: 1024px) {
-  .footer-content .top-block .middle-content .row .item-group {
+  .item-group {
     width: 140px;
   }
 }
-.footer-content .top-block .middle-content .row .item-group #payment-methods-img {
+.item-group #payment-methods-img {
   width: 85%;
 }
+
 @media (max-width: 855px) {
-  .footer-content .top-block .right-content {
+  .right-content {
     margin-top: 50px;
   }
-  .footer-content .top-block .right-content .socials-desktop {
+  .right-content .socials-desktop {
     display: none;
   }
 }
-.footer-content .top-block .right-content .social-container {
+
+.social-container {
   display: flex;
   gap: 32px;
   margin-bottom: 20px;
 }
 @media (max-width: 1024px) {
-  .footer-content .top-block .right-content .social-container {
+  .social-container {
     gap: 22px;
   }
 }
 @media (max-width: 855px) {
-  .footer-content .top-block .right-content .social-container {
+  .social-container {
     justify-content: center;
   }
 }
-.footer-content .top-block .right-content .social-container .social-item {
+
+.social-item {
   transition: 0.2s ease-in-out;
 }
-.footer-content .top-block .right-content .social-container .social-item:hover {
+.social-item:hover {
   cursor: pointer;
   transform: translateY(-4px);
 }
-.footer-content .top-block .right-content .connect-group {
+
+.connect-group {
   display: flex;
   flex-direction: column;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
-.footer-content .top-block .right-content .connect-group .connect-item {
+
+.connect-item {
   padding: 16px 8px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.footer-content .top-block .right-content .connect-group .connect-item .contact-container {
+
+.contact-container {
   display: flex;
   gap: 12px;
   margin: 10px 0px;
 }
-.footer-content .bottom-block-desktop {
+
+.bottom-footer-desktop {
   display: flex;
   justify-content: space-around;
   align-items: start;
@@ -1516,27 +1534,29 @@ input {
   text-align: center;
 }
 @media (max-width: 855px) {
-  .footer-content .bottom-block-desktop {
+  .bottom-footer-desktop {
     display: none;
   }
 }
-.footer-content .bottom-block-desktop div {
+.bottom-footer-desktop div {
   display: flex;
   justify-content: space-between;
   gap: 42px;
 }
-.footer-content .bottom-block-mobile {
+
+.bottom-footer-mobile {
   display: none;
   justify-content: center;
   flex-direction: column;
   text-align: center;
 }
 @media (max-width: 855px) {
-  .footer-content .bottom-block-mobile {
+  .bottom-footer-mobile {
     display: flex;
   }
 }
-.footer-content .bottom-block-mobile .top {
+
+.top-block-mobile {
   display: flex;
   padding-bottom: 20px;
   margin-bottom: 15px;
@@ -1546,19 +1566,21 @@ input {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   flex-wrap: wrap;
 }
-.footer-content .bottom-block-mobile .top div {
+.top-block-mobile div {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
 }
-.footer-content .bottom-block-mobile .top .group-link {
+
+.group-link {
   width: auto;
 }
-.footer-content .bottom-block-mobile .top .social-item {
+
+.social-item {
   transition: 0.2s ease-in-out;
 }
-.footer-content .bottom-block-mobile .top .social-item:hover {
+.social-item:hover {
   cursor: pointer;
   transform: translateY(-4px);
 }
