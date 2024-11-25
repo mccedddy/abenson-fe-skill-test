@@ -422,15 +422,6 @@
       justify-content: space-between;
       margin-bottom: 10px;
 
-      .error-text {
-        color: colors.$red;
-        position: absolute;
-        z-index: 2;
-        bottom: -16px;
-        left: 15px;
-        font-weight: 400;
-      }
-
       #name-input,
       #email-input,
       #resume-input {

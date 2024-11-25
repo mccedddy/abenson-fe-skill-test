@@ -43,6 +43,7 @@
   }
 }
 
+// Header
 .top-menu-button {
   height: 22px;
   border: 0px;
@@ -56,6 +57,7 @@
   justify-content: center;
   gap: 4px;
   transition: 0.2s ease-in-out;
+  background-color: colors.$light;
 
   &:hover {
     color: colors.$primary;
@@ -136,6 +138,7 @@
   justify-content: center;
   align-items: center;
   gap: 4px;
+  text-wrap: nowrap;
   transition: 0.2s ease-in-out;
 
   &:hover {
@@ -148,6 +151,7 @@
   }
 }
 
+// Banner
 .banner-button {
   box-shadow: 0px 5px 20px 3px rgba(0, 0, 0, 0.3);
 
@@ -162,7 +166,7 @@
     font-size: 15px;
   }
 
-  @media (max-width: 542px) {
+  @media (max-width: 768px) {
     .desktop {
       display: none;
     }
@@ -171,11 +175,11 @@
     }
   }
 
-  @media (max-width: 412px) {
+  @media (max-width: 425px) {
     height: 32px;
     width: 85px;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 600;
   }
 }
 
@@ -203,6 +207,7 @@
   }
 }
 
+// Teams
 .team-card-button {
   @include button(white, $hover-color: false);
 
@@ -272,6 +277,7 @@
   right: 0px;
 }
 
+// Jobs
 #see-all-jobs {
   @include button(white, $hover-up: false);
 
@@ -281,6 +287,7 @@
   border-radius: 22px;
 }
 
+// Send
 #browse-file {
   @include button(white, $hover-up: false);
 
@@ -294,6 +301,7 @@
   @include button;
 }
 
+// Footer
 #subscribe-button {
   @include button(white, $hover-up: false, $hover-color: false);
 

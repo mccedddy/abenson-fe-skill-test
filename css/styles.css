@@ -4,6 +4,7 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: "Poppins", sans-serif;
+  font-weight: 400;
   color: #4c525c;
   scroll-behavior: smooth;
 }
@@ -63,6 +64,21 @@ input {
   color: #4c525c;
 }
 
+@keyframes header-drop-top {
+  0% {
+    transform: translateY(-34px);
+  }
+}
+@keyframes header-drop-mid {
+  0%, 40% {
+    transform: translateY(-104px);
+  }
+}
+@keyframes header-drop-bot {
+  0%, 20% {
+    transform: translateY(-138px);
+  }
+}
 @keyframes error-shake {
   3%, 21%, 39%, 57%, 74%, 92% {
     transform: translateX(5px);
@@ -87,6 +103,7 @@ input {
   justify-content: center;
   gap: 4px;
   transition: 0.2s ease-in-out;
+  background-color: #f1f2f6;
 }
 .top-menu-button:hover {
   color: #1e22aa;
@@ -160,6 +177,7 @@ input {
   justify-content: center;
   align-items: center;
   gap: 4px;
+  text-wrap: nowrap;
   transition: 0.2s ease-in-out;
 }
 .bottom-menu-button:hover {
@@ -182,7 +200,7 @@ input {
 .banner-button .button-text {
   font-size: 15px;
 }
-@media (max-width: 542px) {
+@media (max-width: 768px) {
   .banner-button .desktop {
     display: none;
   }
@@ -190,12 +208,12 @@ input {
     display: block;
   }
 }
-@media (max-width: 412px) {
+@media (max-width: 425px) {
   .banner-button {
     height: 32px;
     width: 85px;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 600;
   }
 }
 
@@ -413,12 +431,19 @@ input {
 
 .header {
   width: 100%;
+  height: 138px;
   max-width: 1280px;
   position: sticky;
   top: 0px;
-  z-index: 10;
   background-color: #ffffff;
   border-radius: 0px 0px 20px 20px;
+  z-index: 100;
+}
+@media (max-width: 768px) {
+  .header {
+    border-radius: 0px;
+    height: 70px;
+  }
 }
 
 .top-menu {
@@ -430,6 +455,9 @@ input {
   align-items: center;
   justify-content: space-between;
   background-color: #f1f2f6;
+  z-index: 3;
+  animation: 0.5s header-drop-top ease-out;
+  position: absolute;
 }
 @media (max-width: 768px) {
   .top-menu {
@@ -452,11 +480,16 @@ input {
   gap: 25px;
   background-color: #1e22aa;
   border-radius: 0px 0px 20px 20px;
+  z-index: 2;
+  animation: 1s header-drop-mid ease-out;
+  position: absolute;
+  top: 34px;
 }
 @media (max-width: 768px) {
   .middle-menu {
     padding: 8px 12px 10px 12px;
     gap: 12px;
+    top: 0px;
   }
 }
 .middle-menu .abenson-logo {
@@ -498,7 +531,12 @@ input {
   box-sizing: border-box;
   margin: 5px 0px 5px 0px;
   border: 0px;
+  background-color: #ffffff;
   overflow-x: auto;
+  z-index: 1;
+  animation: 1.5s header-drop-bot ease-out;
+  position: relative;
+  top: 104px;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -511,20 +549,24 @@ input {
   }
 }
 
-.banner-description {
-  max-width: 600px;
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-
 .section-title {
   font-weight: 600;
   text-align: center;
 }
 
 .section-description {
-  font-weight: 400;
   max-width: 800px;
+  font-weight: 400;
+}
+
+.banner-title {
+  font-weight: 600;
+}
+
+.banner-description {
+  max-width: 600px;
+  margin-bottom: 20px;
+  font-weight: 400;
 }
 
 .mvc-title {
@@ -561,10 +603,6 @@ input {
   }
 }
 
-.join-description {
-  font-weight: 400;
-}
-
 .team-card-title {
   font-size: 24px;
 }
@@ -580,8 +618,8 @@ input {
 }
 
 .team-card-description {
-  font-weight: 400;
   font-size: 18px;
+  font-weight: 400;
 }
 @media (max-width: 768px) {
   .team-card-description {
@@ -610,9 +648,18 @@ input {
   font-weight: 400;
 }
 
-.follow-text {
+.error-text {
+  color: #ff4f44;
+  position: absolute;
+  z-index: 2;
+  bottom: -16px;
+  left: 15px;
   font-weight: 400;
+}
+
+.follow-text {
   text-align: left;
+  font-weight: 400;
 }
 
 .sub-title {
@@ -621,7 +668,6 @@ input {
 
 .sub-description {
   color: #ffffff;
-  font-weight: 400;
 }
 
 .group-title {
@@ -631,7 +677,6 @@ input {
 
 .group-text, .group-link {
   color: #ffffff;
-  font-weight: 400;
   line-height: 22px;
 }
 
@@ -1160,14 +1205,6 @@ input {
   justify-content: space-between;
   margin-bottom: 10px;
 }
-.send .send-form .input-field .error-text {
-  color: #ff4f44;
-  position: absolute;
-  z-index: 2;
-  bottom: -16px;
-  left: 15px;
-  font-weight: 400;
-}
 .send .send-form .input-field #name-input,
 .send .send-form .input-field #email-input,
 .send .send-form .input-field #resume-input {
@@ -1279,6 +1316,7 @@ input {
 
 .footer-content {
   width: 95%;
+  max-width: 1280px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

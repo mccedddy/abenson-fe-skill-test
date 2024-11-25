@@ -1,3 +1,29 @@
+@keyframes header-drop-top {
+  0% {
+    transform: translateY(-34px);
+  }
+  100% {
+  }
+}
+
+@keyframes header-drop-mid {
+  0%,
+  40% {
+    transform: translateY(-104px);
+  }
+  100% {
+  }
+}
+
+@keyframes header-drop-bot {
+  0%,
+  20% {
+    transform: translateY(-138px);
+  }
+  100% {
+  }
+}
+
 @keyframes error-shake {
   3%,
   21%,
