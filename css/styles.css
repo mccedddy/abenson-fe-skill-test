@@ -284,6 +284,43 @@ input {
   font-size: 15px;
 }
 
+#scroll-left,
+#scroll-right {
+  height: 38px;
+  width: 38px;
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 1;
+  border: 0px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+  transition: 0.2s ease-in-out;
+}
+#scroll-left img,
+#scroll-right img {
+  height: 25px;
+}
+#scroll-left:hover,
+#scroll-right:hover {
+  transform: scale(1.3);
+}
+#scroll-left:active,
+#scroll-right:active {
+  transform: scale(1.1);
+}
+
+#scroll-left {
+  left: 0px;
+}
+
+#scroll-right {
+  right: 0px;
+}
+
 #see-all-jobs {
   height: 44px;
   width: 330px;
@@ -902,7 +939,13 @@ input {
     padding: 10px 0px;
   }
 }
-.teams .teams-container {
+.teams .scroll-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.teams .teams-scroll {
   width: 100%;
   display: flex;
   gap: 20px;
@@ -918,41 +961,41 @@ input {
   position: relative;
   margin-top: -20px;
 }
-.teams .teams-container::-webkit-scrollbar {
+.teams .teams-scroll::-webkit-scrollbar {
   display: none;
 }
 @media (max-width: 768px) {
-  .teams .teams-container {
+  .teams .teams-scroll {
     gap: 15px;
   }
 }
 @media (max-width: 425px) {
-  .teams .teams-container {
+  .teams .teams-scroll {
     gap: 10px;
   }
 }
-.teams .teams-container .team-card {
+.teams .teams-scroll .team-card {
   background-color: transparent;
   width: 300px;
   height: 425px;
   perspective: 1500px;
 }
-.teams .teams-container .team-card:hover .team-card-inner {
+.teams .teams-scroll .team-card:hover .team-card-inner {
   transform: rotateY(180deg);
 }
 @media (max-width: 768px) {
-  .teams .teams-container .team-card {
+  .teams .teams-scroll .team-card {
     width: 250px;
     height: 340px;
   }
 }
 @media (max-width: 425px) {
-  .teams .teams-container .team-card {
+  .teams .teams-scroll .team-card {
     width: 180px;
     height: 240px;
   }
 }
-.teams .teams-container .team-card .team-card-inner {
+.teams .teams-scroll .team-card .team-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
@@ -960,8 +1003,8 @@ input {
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
-.teams .teams-container .team-card .team-card-inner .team-card-front,
-.teams .teams-container .team-card .team-card-inner .team-card-back {
+.teams .teams-scroll .team-card .team-card-inner .team-card-front,
+.teams .teams-scroll .team-card .team-card-inner .team-card-back {
   position: absolute;
   width: 300px;
   height: 425px;
@@ -978,8 +1021,8 @@ input {
   gap: 25px;
 }
 @media (max-width: 768px) {
-  .teams .teams-container .team-card .team-card-inner .team-card-front,
-  .teams .teams-container .team-card .team-card-inner .team-card-back {
+  .teams .teams-scroll .team-card .team-card-inner .team-card-front,
+  .teams .teams-scroll .team-card .team-card-inner .team-card-back {
     width: 250px;
     height: 340px;
     gap: 20px;
@@ -987,23 +1030,23 @@ input {
   }
 }
 @media (max-width: 425px) {
-  .teams .teams-container .team-card .team-card-inner .team-card-front,
-  .teams .teams-container .team-card .team-card-inner .team-card-back {
+  .teams .teams-scroll .team-card .team-card-inner .team-card-front,
+  .teams .teams-scroll .team-card .team-card-inner .team-card-back {
     width: 180px;
     height: 240px;
     gap: 16px;
     padding: 14px 12px;
   }
 }
-.teams .teams-container .team-card .team-card-inner .team-card-front img,
-.teams .teams-container .team-card .team-card-inner .team-card-back img {
+.teams .teams-scroll .team-card .team-card-inner .team-card-front img,
+.teams .teams-scroll .team-card .team-card-inner .team-card-back img {
   width: 100%;
 }
-.teams .teams-container .team-card .team-card-inner .team-card-front {
+.teams .teams-scroll .team-card .team-card-inner .team-card-front {
   background-color: #868686;
   justify-content: space-around;
 }
-.teams .teams-container .team-card .team-card-inner .team-card-back {
+.teams .teams-scroll .team-card .team-card-inner .team-card-back {
   background-color: #656565;
   transform: rotateY(180deg);
 }

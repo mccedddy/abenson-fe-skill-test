@@ -20,6 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const expandButton = document.getElementById("see-all-jobs");
   let isExpanded = false;
 
+  // Teams scroll
+  const scrollWrapper = document.querySelector(".teams-scroll");
+  const scrollLeftButton = document.getElementById("scroll-left");
+  const scrollRightButton = document.getElementById("scroll-right");
+
+  const scrollAmount = 300;
+
   // Event listeners
   submitButton.addEventListener("click", () => {
     validateForm();
@@ -31,6 +38,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   expandButton.addEventListener("click", () => {
     toggleExpandJobs();
+  });
+
+  scrollLeftButton.addEventListener("click", () => {
+    scrollWrapper.scrollBy({
+      left: -scrollAmount,
+      behavior: "smooth",
+    });
+  });
+
+  scrollRightButton.addEventListener("click", () => {
+    scrollWrapper.scrollBy({
+      left: scrollAmount,
+      behavior: "smooth",
+    });
   });
 
   // Display file name

@@ -239,7 +239,14 @@
   @include section;
   padding: 20px 0px 0px 0px;
 
-  .teams-container {
+  .scroll-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .teams-scroll {
     @include section-scroll;
     padding: 30px 20px;
     box-sizing: border-box;
