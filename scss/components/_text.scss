@@ -8,7 +8,6 @@
 }
 
 .section-description {
-  max-width: 800px;
   font-weight: 400;
 }
 
@@ -23,6 +22,12 @@
 }
 
 // About
+.about-description {
+  max-width: 800px;
+  font-weight: 400;
+  width: 90%;
+}
+
 .mvc-title {
   font-size: 28px;
   font-weight: 600;
@@ -90,7 +95,7 @@
   font-weight: 400;
 }
 
-// Send
+// Resume
 #file-name {
   font-size: 13px;
   font-weight: 400;

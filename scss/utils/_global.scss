@@ -1,12 +1,5 @@
 @use "../utils/colors";
 
-// Breakpoints
-// 1280px
-// 1024px
-// 768px
-// 425px
-// 375px
-
 @mixin no-scrollbar {
   scrollbar-width: none;
   -ms-overflow-style: none;

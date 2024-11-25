@@ -12,15 +12,11 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <!-- Animate CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
     <!-- Animate on Scroll -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
+    <!-- Header -->
     <header class="header">
       <section class="top-menu">
         <button type="button" class="top-menu-button">
@@ -86,9 +82,10 @@
     </header>
 
     <main class="main">
+      <!-- Banner -->
       <section class="banner">
         <div
-          class="image-container"
+          class="banner-img-container"
           data-aos="fade-down"
           data-aos-duration="1000"
           data-aos-easing="ease-out-cubic"
@@ -133,7 +130,7 @@
             </button>
             <button id="submit-resume-button" class="banner-button">
               <h5 class="mobile button-text">Submit</h5>
-              <h5 class="desktop button-text" onclick="location.href='#send'">
+              <h5 class="desktop button-text" onclick="location.href='#resume'">
                 Submit Resume
               </h5>
             </button>
@@ -141,14 +138,15 @@
         </div>
       </section>
 
+      <!-- About -->
       <section
-        class="about-us"
+        class="about"
         data-aos="fade-up"
         data-aos-duration="1000"
         data-aos-easing="ease-out-cubic"
       >
         <h2 class="section-title">About Us</h2>
-        <h5 class="section-description">
+        <h5 class="about-description">
           Abenson group is a trusted retailer in the Philippines engaged in
           distribution of appliance, gadgets, and furniture for over 50 years.
           Our growing network of 140+ stores nationwide and online superstore
@@ -156,7 +154,7 @@
           services
         </h5>
 
-        <section class="scroll-container">
+        <section class="about-scroll-container">
           <div
             class="mvc-card"
             data-aos="fade-left"
@@ -206,6 +204,7 @@
         </section>
       </section>
 
+      <!-- Join -->
       <section
         class="join"
         data-aos="fade-up"
@@ -213,7 +212,7 @@
         data-aos-easing="ease-out-cubic"
       >
         <h2 class="section-title">Why join us?</h2>
-        <div class="scroll-container">
+        <div class="join-scroll-container">
           <div
             class="join-card"
             data-aos="fade-left"
@@ -285,6 +284,7 @@
         </div>
       </section>
 
+      <!-- Teams -->
       <section
         class="teams"
         data-aos="fade-up"
@@ -576,6 +576,7 @@
         </div>
       </section>
 
+      <!-- Jobs -->
       <section
         class="jobs"
         id="jobs"
@@ -664,9 +665,10 @@
         </button>
       </section>
 
+      <!-- Resume -->
       <section
-        class="send"
-        id="send"
+        class="resume"
+        id="resume"
         data-aos="fade-up"
         data-aos-duration="1000"
         data-aos-easing="ease-out-cubic"
@@ -676,7 +678,7 @@
           <h5 class="section-description">Send us your resume here!</h5>
         </div>
 
-        <form class="send-form" id="resume-form">
+        <form class="resume-form" id="resume-form">
           <div
             class="input-field"
             id="name-field"
@@ -746,6 +748,7 @@
         </form>
       </section>
 
+      <!-- Follow -->
       <section
         class="follow"
         data-aos="fade-up"
@@ -804,6 +807,7 @@
       </section>
     </main>
 
+    <!-- Footer -->
     <footer
       class="footer"
       data-aos="fade-up"
