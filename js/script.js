@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const expandButton = document.getElementById("see-all-jobs");
 
   // Scroll containers
-  const scrollContainers = document.querySelectorAll(".scroll-container");
+  const scrollContainers = document.querySelectorAll(".scroll");
 
   // Teams scroll
   const scrollWrapper = document.querySelector(".teams-scroll");
